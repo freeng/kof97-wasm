@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KOF97</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><h1>KOF97</h1><span>独立角色版</span></header>
+    <!-- SDL2's Emscripten backend queries #canvas, independently of Module.canvas. -->
+    <div class="screen"><canvas id="canvas" width="640" height="480" tabindex="0" aria-label="游戏画面"></canvas></div>
+    <nav aria-label="游戏控制">
+      <button id="start" disabled>开始游戏</button>
+      <button id="pause" disabled>暂停</button>
+      <button id="reset" disabled>重新开始</button>
+      <button id="save" disabled>保存进度</button>
+      <button id="load" disabled>读取进度</button>
+      <button id="quit" disabled>保存并退出</button>
+      <button id="fullscreen">全屏</button>
+    </nav>
+    <p id="status" role="status">正在加载游戏资源…</p>
+    <div class="controls">
+      <p><strong>1P</strong> WASD 移动 · F G H J 攻击 · 5 投币 · 1 开始</p>
+      <p><strong>2P</strong> 方向键移动 · [ ] ; ' 攻击 · 6 投币 · 2 开始</p>
+    </div>
+    <p class="note">进度保存在当前浏览器中。离开前请保存进度或使用“保存并退出”。</p>
+    <footer>基于 MAME 核心 · <a href="COPYING.txt">开源许可</a></footer>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
